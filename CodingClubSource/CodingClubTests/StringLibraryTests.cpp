@@ -35,5 +35,20 @@ namespace CodingClubTests
 
 			Assert::AreEqual(expected, result);
 		}
+
+		TEST_METHOD(String_RemoveVowels_Returns_InputString_With_UpperCase_Vowels_Removed)
+		{
+			//Given
+			std::string input = "sAUsAgE";
+			std::string result;
+
+			//When
+			result = removeVowels(input);
+
+			//Then
+			std::string expected = "ssg";
+
+			Assert::AreEqual(expected, result);
+		}
 	};
 }
